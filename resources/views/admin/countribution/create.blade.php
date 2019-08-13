@@ -48,21 +48,8 @@
 						<label class="col-sm-4 control-label">Jumlah Iuran</label>
 						<div class="col-sm-8">
 							<select class="form-control" name="money" hidden />
-								<option>50000</option>
-								<option>75000</option>
-								<option>100000</option>
-								<option>150000</option>
-								<option>200000</option>
-								<option>250000</option>
-								<option>300000</option>
-								<option>375000</option>
-								<option>450000</option>
-								<option>525000</option>
-								<option>600000</option>
-								<option>675000</option>
-								<option>750000</option>
-								<option>825000</option>
-								<option>900000</option>
+								<option value="50000">Rp.50000,-</option>
+								<option value="75000">Rp.75000,-</option>
 							</select>
 						</div>
 					</div>
@@ -167,8 +154,8 @@
 					</div>
 				</div>
 				<footer class="panel-footer">
-					<button type="submit" class="btn btn-success pull-right">Submit</button>
-					<button type="reset" class="btn btn-default">Reset</button>
+					<button type="submit" class="btn btn-success pull-right">Simpan</button>
+					<button type="reset" class="btn btn-default">Ulang</button>
 				</footer>
 			</section>
 		</form>

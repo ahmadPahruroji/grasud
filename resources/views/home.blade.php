@@ -37,7 +37,7 @@
                                     </div>
                                 </div>
                                 <div class="summary-footer">
-                                    <a href="{{ url ('countributions') }}" class="text-uppercase">(view all)</a>
+                                    <a href="{{ url ('countributions') }}" class="text-uppercase">(Lihat Data)</a>
                                 </div>
                             </div>
                         </div>
@@ -63,7 +63,7 @@
                                     </div>
                                 </div>
                                 <div class="summary-footer">
-                                    <a href="{{ url ('users') }}" class="text-uppercase">(view all)</a>
+                                    <a href="{{ url ('users') }}" class="text-uppercase">(Lihat Data)</a>
                                 </div>
                             </div>
                         </div>
@@ -89,7 +89,7 @@
                                     </div>
                                 </div>
                                 <div class="summary-footer">
-                                    <a href="{{ url ('members') }}" class="text-uppercase">(view all)</a>
+                                    <a href="{{ url ('members') }}" class="text-uppercase">(Lihat Data)</a>
                                 </div>
                             </div>
                         </div>
@@ -115,7 +115,7 @@
                                     </div>
                                 </div>
                                 <div class="summary-footer">
-                                    <a href="{{ url ('officers') }}" class="text-uppercase">(view all)</a>
+                                    <a href="{{ url ('officers') }}" class="text-uppercase">(Lihat Data)</a>
                                 </div>
                             </div>
                         </div>

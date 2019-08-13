@@ -18,7 +18,9 @@ class CountributionController extends Controller
     public function index()
     {
         //
-        $data["countributions"] = Countribution::with('user')->orderBy('created_at','desc')->get();
+        $data["countributions"] = Countribution::with('user','member')->where('status',1)->orderBy('updated_at','desc')->get();
+        $data["paid"] = Countribution::with('user','member')->where('status',0)->orderBy('created_at','desc')->get();
+        // $data["countributions"] = Countribution::with('user')->orderBy('created_at','desc')->get();
         $name['user'] = User::with('biodata')->find(Auth::user()->id);
         return view('admincoordinator/countribution.index', $data, $name);
     }

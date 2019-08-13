@@ -293,7 +293,14 @@
 									</a>
 								</li>
 								{{--  --}}
-								<li  class="nav-parent">
+								<li>
+									<a href="{{ url ('users') }}" style="color: white">
+										<i class="fa fa-users" aria-hidden="true"></i>
+										<span>Data Pengguna</span>
+									</a>
+								</li>
+								{{--  --}}
+								{{-- <li  class="nav-parent">
 									<a style="color: white">
 										<i class="fa fa-user" aria-hidden="true"></i>
 										<span>Data Pengguna</span>
@@ -310,7 +317,7 @@
 											</a>
 										</li>
 									</ul>
-								</li>
+								</li> --}}
 								{{--  --}}
 								<li>
 									<a href="{{ url ('members') }}" style="color: white">
@@ -383,19 +390,19 @@
 
 						<hr class="separator" />
 
-						<div class="sidebar-widget widget-tasks">
+						{{-- <div class="sidebar-widget widget-tasks">
 							<div class="widget-header">
 								<div class="widget-toggle">+</div>
 							</div>
-						</div>
+						</div> --}}
 
 						<hr class="separator" />
 
-						<div class="sidebar-widget widget-stats">
+						{{-- <div class="sidebar-widget widget-stats">
 							<div class="widget-header">
 								<div class="widget-toggle">+</div>
 							</div>
-						</div>
+						</div> --}}
 					</div>
 
 				</div>

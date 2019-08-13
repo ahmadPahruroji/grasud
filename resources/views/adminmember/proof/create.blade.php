@@ -15,6 +15,11 @@
 		<form action="{{ route('proofusers.store') }}" enctype="multipart/form-data" files="true" method="post">
 			@csrf
 			@method('post')
+			@php
+			$tanggal = date_default_timezone_get('Asia/Jakarta'); date("Y-m-d");
+			$tanggal_data = date("Y-m-d");
+			$date = date("Y-m-d", strtotime($tanggal_data));
+			@endphp
 
 			<section class="panel panel-primary">
 				<header class="panel-heading">
@@ -46,7 +51,7 @@
 					<div class="form-group">
 						<label class="col-sm-4 control-label">Tanggal</label>
 						<div class="col-sm-8">
-							<input type="date" name="date" class="form-control" placeholder="Tulis Disini" required/>
+							<input type="date" name="date" class="form-control" value="{{ $date }}" placeholder="Tulis Disini" required/>
 						</div>
 					</div>
 					<div class="form-group">
@@ -57,8 +62,8 @@
 					</div>
 				</div>
 				<footer class="panel-footer">
-					<button type="submit" class="btn btn-success pull-right">Submit</button>
-					<button type="reset" class="btn btn-default">Reset</button>
+					<button type="submit" class="btn btn-success pull-right">Simpan</button>
+					<button type="reset" class="btn btn-default">Ulang</button>
 				</footer>
 			</section>
 		</form>

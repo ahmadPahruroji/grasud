@@ -59,13 +59,13 @@
 					<div class="form-group">
 						<label class="col-sm-4 control-label">Password</label>
 						<div class="col-sm-8">
-							<input type="password" class="form-control" value="{{ $users->password }}"  name="password" placeholder="Tulis Disini" required>
+							<input type="password" class="form-control" name="password" value="password" placeholder="Tulis Disini" required>
 						</div>
 					</div>
 				</div>
 				<footer class="panel-footer">
-					<button type="submit" class="btn btn-success pull-right">Submit</button>
-					<button type="reset" class="btn btn-default">Reset</button>
+					<button type="submit" class="btn btn-success pull-right">Simpan</button>
+					<button type="reset" class="btn btn-default">Ulang</button>
 				</footer>
 			</section>
 		</form>

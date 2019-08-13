@@ -57,8 +57,8 @@
                                                 <div class="btn-group">
                                                     <button type="button" class="btn btn-danger" onclick="destroy({{$proof->id}})" data-toggle="tooltip" data-placement="right" title="Hapus Data"><i class="fa fa-trash-o"></i></button>
 
-                                                    <a href="{{ route('proofusers.edit',$proof->id) }}" role="button" class="btn btn-warning" data-toggle="tooltip" data-placement="right" title="Edit Data"><i class="fa fa-gear"></i></a>
-                                                    <a href="{{ route('downloadfile', $proof->id) }}" role="button" class="btn btn-warning" data-toggle="tooltip" data-placement="right" title="download"><i class="fa fa-gear"></i></a>
+                                                    <a href="{{ route('proofusers.edit',$proof->id) }}" role="button" class="btn btn-warning" data-toggle="tooltip" data-placement="right" title="Edit Data"><i class="fa fa-edit"></i></a>
+                                                    {{-- <a href="{{ route('downloadfile', $proof->id) }}" role="button" class="btn btn-warning" data-toggle="tooltip" data-placement="right" title="download"><i class="fa fa-gear"></i></a> --}}
                                                 </div>
                                             </center> 
                                         </td>

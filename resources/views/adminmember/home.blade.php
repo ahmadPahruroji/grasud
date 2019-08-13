@@ -12,13 +12,13 @@ ini_set( 'display_errors', 1 );
     error_reporting( E_ALL );
     $to   = $users->email;
     $judul  = "Waktu Pembayaran Iuran";
-    $dari = "From: e-grasud@planetinformatika.com \n";
+    $dari = "From: db_ahmad@gmail.com \n";
     //pass @Grasud12
     $dari .= "Content-type: text/html \r\n";
                                                     
     $pesan  = "Waktu pembayaran Iuran sudah dimulai. Silahkan melakukan pembayaran pada bulan ini. <br />
     jika sudah bayar abaikan saja ok (:";
-    if (date('d') == "30" ){
+    if (date('d') == "14" ){
                                                          
     @mail($to, $judul, $pesan, $dari);
     }
@@ -54,7 +54,7 @@ ini_set( 'display_errors', 1 );
                                     </div>
                                 </div>
                                 <div class="summary-footer">
-                                    <a href="" class="text-uppercase">(view all)</a>
+                                    {{-- <a href="" class="text-uppercase">(view all)</a> --}}
                                 </div>
                             </div>
                         </div>
@@ -80,7 +80,7 @@ ini_set( 'display_errors', 1 );
                                     </div>
                                 </div>
                                 <div class="summary-footer">
-                                    <a href="" class="text-uppercase">(view all)</a>
+                                    <a href="{{ url('complaintusers') }}" class="text-uppercase">(lihat data)</a>
                                 </div>
                             </div>
                         </div>

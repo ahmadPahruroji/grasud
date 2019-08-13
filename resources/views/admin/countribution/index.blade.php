@@ -158,7 +158,7 @@
                                         <td>
                                             <center>
                                                 <div class="btn-group">
-                                                    <button type="button" class="btn btn-danger" onclick="destroy({{$paidoff->id}})" data-toggle="tooltip" data-placement="right" title="Hapus Data"><i class="fa fa-trash-o"></i></button>
+                                                    <button type="button" class="btn btn-danger" onclick="destroy({{$paidoff->id}})" data-toggle="tooltip" data-placement="left" title="Hapus Data"><i class="fa fa-trash-o"></i></button>
 
                                                     <a href="{{ route('countributions.edit',$paidoff->id) }}" role="button" class="btn btn-warning" data-toggle="tooltip" data-placement="right" title="Edit Data"><i class="fa fa-edit"></i></a>
                                                 </div>

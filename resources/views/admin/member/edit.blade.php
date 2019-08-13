@@ -27,7 +27,7 @@
 					{{--  --}}
 				</header>
 				<div class="panel-body">
-					<div class="form-group">
+{{-- 					<div class="form-group">
 						<label class="col-sm-4 control-label">Pengguna</label>
 						<div class="col-sm-8">
 							<select class="form-control" name="user_id">
@@ -36,7 +36,7 @@
 								@endforeach
 							</select>
 						</div>
-					</div>
+					</div> --}}
 					<div class="form-group">
 						<label class="col-sm-4 control-label">Nama</label>
 						<div class="col-sm-8">
@@ -63,8 +63,8 @@
 					</div>
 				</div>
 				<footer class="panel-footer">
-					<button type="submit" class="btn btn-success pull-right">Submit</button>
-					<button type="reset" class="btn btn-default">Reset</button>
+					<button type="submit" class="btn btn-success pull-right">Simpan</button>
+					<button type="reset" class="btn btn-default">Batal</button>
 				</footer>
 			</section>
 		</form>

@@ -37,7 +37,7 @@
                                     </div>
                                 </div>
                                 <div class="summary-footer">
-                                    <a href="" class="text-uppercase">(view all)</a>
+                                    <a href="{{ url('countributionuser') }}" class="text-uppercase">(lihat data)</a>
                                 </div>
                             </div>
                         </div>
@@ -63,7 +63,7 @@
                                     </div>
                                 </div>
                                 <div class="summary-footer">
-                                    <a href="" class="text-uppercase">(view all)</a>
+                                    <a href="{{ url('complaintuser') }}" class="text-uppercase">(lihat data)</a>
                                 </div>
                             </div>
                         </div>

@@ -56,8 +56,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'db.ahmad44@gmail.com'),
-        'name' => env('MAIL_FROM_NAME', 'No-replay'),
+        'address' => env('MAIL_FROM_ADDRESS', 'e-grasud@gmail.com'),
+        'name' => env('MAIL_FROM_NAME', 'E-Grasud'),
     ],
 
     /*

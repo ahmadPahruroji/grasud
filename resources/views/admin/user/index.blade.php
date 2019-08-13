@@ -42,7 +42,7 @@
                             <div class="btn-group">
                                 <button type="button" class="btn btn-danger" onclick="destroy({{$user->id}})" data-toggle="tooltip" data-placement="right" title="Hapus Data"><i class="fa fa-trash-o"></i></button>
                                 
-                                <a href="{{ route('users.edit',$user->id) }}" role="button" class="btn btn-warning" data-toggle="tooltip" data-placement="right" title="Edit Data"><i class="fa fa-gear"></i></a>
+                                <a href="{{ route('users.edit',$user->id) }}" role="button" class="btn btn-warning" data-toggle="tooltip" data-placement="right" title="Edit Data"><i class="fa fa-edit"></i></a>
                             </div>
                         </center> 
                     </td>
@@ -68,9 +68,9 @@
             text:"Anda Tidak Akan Dapat Mengembalikan Data Ini!",
             showCancelButton:true,
             cancelButtonText: "Batal",
-            cancelButtonColor:"#d33",
+            cancelButtonColor:"#3085d6",
             confirmButtonText:"Ya, Saya Yakin!",
-            confirmButtonColor:"#3085d6"
+            confirmButtonColor:"#d33"
         }).then(result=>{
             if(result.value){
                 let access = {

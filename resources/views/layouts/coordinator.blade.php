@@ -49,7 +49,7 @@
 		<!-- start: header -->
 		<header class="header">
 			<div class="logo-container">
-				<a href="../" class="logo">
+				<a href="{{ route('homecoordinator') }}" class="logo">
 					<img src="{{ asset('octopus/assets/images/lg.png') }}" height="35" alt="Porto Admin" />
 				</a>
 				<div class="visible-xs toggle-sidebar-left" data-toggle-class="sidebar-left-opened" data-target="html" data-fire-event="sidebar-left-opened">

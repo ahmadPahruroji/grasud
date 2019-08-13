@@ -55,10 +55,15 @@
                     </td>
                     <td>
                      <center>
+                        @if ($complaint->statuscomplaint == 2)
+                        <button type="button" class="btn btn-danger" onclick="destroy({{$complaint->id}})" data-toggle="tooltip" data-placement="right" title="Hapus Data"><i class="fa fa-trash-o"></i></button>
+                        @else
+                        <button type="button" class="btn btn-danger" disabled="disabled" data-toggle="tooltip" data-placement="right" title="Hapus Data"><i class="fa fa-trash-o"></i></button>
+                        @endif
                         <div class="btn-group">
-                            <button type="button" class="btn btn-danger" onclick="destroy({{$complaint->id}})" data-toggle="tooltip" data-placement="right" title="Hapus Data"><i class="fa fa-trash-o"></i></button>
+                            {{-- <button type="button" class="btn btn-danger" onclick="destroy({{$complaint->id}})" data-toggle="tooltip" data-placement="right" title="Hapus Data"><i class="fa fa-trash-o"></i></button> --}}
 
-                            <a href="{{ route('complaintusers.edit',$complaint->id) }}" role="button" class="btn btn-warning" data-toggle="tooltip" data-placement="right" title="Edit Data"><i class="fa fa-gear"></i></a>
+                            <a href="{{ route('complaintusers.edit',$complaint->id) }}" role="button" class="btn btn-warning" data-toggle="tooltip" data-placement="right" title="Edit Data"><i class="fa fa-edit"></i></a>
                         </div>
                     </center> 
                 </td>
