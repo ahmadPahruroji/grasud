@@ -30,7 +30,7 @@
                                                 $hasil = "Rp. " . number_format($angka,2,',','.');
                                                 return $hasil;
                                             }
-                                            echo format_uang($countributions);
+                                            echo format_uang($total);
 
                                             ?>
                                         </strong>
@@ -84,12 +84,12 @@
                                     <h4 class="title">Total Warga</h4>
                                     <div class="info">
                                         <strong class="amount">
-                                            {{$members->count()}}
+                                            {{$member->count()}}
                                         </strong>
                                     </div>
                                 </div>
                                 <div class="summary-footer">
-                                    <a href="{{ url ('members') }}" class="text-uppercase">(Lihat Data)</a>
+                                    <a href="{{ url ('member') }}" class="text-uppercase">(Lihat Data)</a>
                                 </div>
                             </div>
                         </div>
@@ -110,7 +110,7 @@
                                     <h4 class="title">Total Petugas</h4>
                                     <div class="info">
                                         <strong class="amount">
-                                            {{$officers->count()}}
+                                            {{$officer->count()}}
                                         </strong>
                                     </div>
                                 </div>
@@ -123,10 +123,56 @@
                 </section>
             </div>
         </div>
+        <div id="chartiuran"></div>
     </div>
 </section>
 @endsection
 @section('script')
+<script src="https://code.highcharts.com/highcharts.js"></script>
+{{--  --}}
+<script type="text/javascript">
+    Highcharts.chart('chartiuran', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'Laporan Data Iuran Warga'
+    },
+    subtitle: {
+        text: 'Grafik Iuran Warga'
+    },
+    xAxis: {
+        categories: {!! json_encode($bulan) !!},
+        crosshair: true
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Jumlah Iuran'
+        }
+    },
+    tooltip: {
+        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+            '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+        footerFormat: '</table>',
+        shared: true,
+        useHTML: true
+    },
+    plotOptions: {
+        column: {
+            pointPadding: 0.2,
+            borderWidth: 0
+        }
+    },
+    series: [{
+        name: 'Iuran',
+        data: {!! json_encode($iuran) !!}
+
+    }]
+});
+</script>
+{{--  --}}
 <script type="text/javascript">
     $(()=>{
         if({!! $login !!}){

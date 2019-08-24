@@ -5,7 +5,7 @@
 	<!-- Basic -->
 	<meta charset="UTF-8">
 
-	<title>Member_E-Grasud</title>
+	<title>Member-Mouhadir</title>
 	<meta name="keywords" content="HTML5 Admin Template" />
 	<meta name="description" content="Porto Admin - Responsive HTML5 Template">
 	{{-- <meta http-equiv="refresh" content="10"/> --}}

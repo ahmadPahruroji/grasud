@@ -5,7 +5,7 @@
 	<!-- Basic -->
 	<meta charset="UTF-8">
 
-	<title>Admin_E-Grasud</title>
+	<title>Admin-Mouhadir</title>
 	<meta name="keywords" content="HTML5 Admin Template" />
 	<meta name="description" content="Porto Admin - Responsive HTML5 Template">
 	<meta name="author" content="okler.net">
@@ -27,6 +27,7 @@
 	<link rel="stylesheet" href="{{ asset('octopus/assets/vendor/select2/select2.css') }}" />
 	<link rel="stylesheet" href="{{  asset('octopus/assets/vendor/jquery-datatables-bs3/assets/css/datatables.css') }}" />
 	<link rel="stylesheet" href="{{ asset('octopus/assets/vendor/jquery-ui/css/ui-lightness/jquery-ui-1.10.4.custom.css') }}" />
+	{{-- <link rel="stylesheet" href="{{ asset('octopus/assets/vendor/morris/morris.css') }}" /> --}}
 	{{--  --}}
 	<link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
 	<link href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css" rel="stylesheet" type="text/css">
@@ -374,6 +375,11 @@
 									</a>
 									<ul class="nav nav-children">
 										<li>
+											<a href="{{ url ('iuran') }}" style="color: white">
+												Iuran Bulanan
+											</a>
+										</li>
+										<li>
 											<a href="{{ url ('reports') }}" style="color: white">
 												Iuran Warga
 											</a>
@@ -524,119 +530,191 @@
 	<script src="{{ asset('octopus/assets/vendor/jquery-ui-touch-punch/jquery.ui.touch-punch.js') }}"></script>
 	<script src="{{ asset('octopus/assets/vendor/store-js/store.js') }}"></script>
 	{{--  --}}
-	{{-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script> --}}
-	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-	<script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
-	<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.flash.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-	<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
-	<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
+	{{-- <script src="{{ asset('octopus/assets/vendor/jquery-appear/jquery.appear.js') }}"></script>
+		<script src="{{ asset('octopus/assets/vendor/jquery-easypiechart/jquery.easypiechart.js') }}"></script>
+		<script src="{{ asset('octopus/assets/vendor/flot/jquery.flot.js') }}"></script>
+		<script src="{{ asset('octopus/assets/vendor/flot-tooltip/jquery.flot.tooltip.js') }}"></script>
+		<script src="{{ asset('octopus/assets/vendor/flot/jquery.flot.pie.js') }}"></script>
+		<script src="{{ asset('octopus/assets/vendor/flot/jquery.flot.categories.js') }}"></script>
+		<script src="{{ asset('octopus/assets/vendor/flot/jquery.flot.resize.js') }}"></script>
+		<script src="{{ asset('octopus/assets/vendor/jquery-sparkline/jquery.sparkline.js') }}"></script>
+		<script src="{{ asset('octopus/assets/vendor/raphael/raphael.js') }}"></script>
+		<script src="{{ asset('octopus/assets/vendor/morris/morris.js') }}"></script>
+		<script src="{{ asset('octopus/assets/vendor/gauge/gauge.js') }}"></script>
+		<script src="{{ asset('octopus/assets/vendor/snap-svg/snap.svg.js') }}"></script>
+		<script src="{{ asset('octopus/assets/vendor/liquid-meter/liquid.meter.js') }}"></script>
+		--}}
+		{{--  --}}
+		
+		{{-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script> --}}
+		<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+		<script src="https://cdn.datatables.net/buttons/1.5.6/js/dataTables.buttons.min.js"></script>
+		<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.flash.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+		<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.html5.min.js"></script>
+		<script src="https://cdn.datatables.net/buttons/1.5.6/js/buttons.print.min.js"></script>
 
-	<!-- Theme Base, Components and Settings -->
-	<script src="{{ asset('octopus/assets/javascripts/theme.js') }}"></script>
+		<!-- Theme Base, Components and Settings -->
+		<script src="{{ asset('octopus/assets/javascripts/theme.js') }}"></script>
 
-	<!-- Theme Custom -->
-	<script src="{{ asset('octopus/assets/javascripts/theme.custom.js') }}"></script>
+		<!-- Theme Custom -->
+		<script src="{{ asset('octopus/assets/javascripts/theme.custom.js') }}"></script>
 
-	<!-- Theme Initialization Files -->
-	<script src="{{ asset('octopus/assets/javascripts/theme.init.js') }}"></script>
+		<!-- Theme Initialization Files -->
+		<script src="{{ asset('octopus/assets/javascripts/theme.init.js') }}"></script>
 
-	<!-- Examples -->
-	<script src="{{ asset('octopus/assets/javascripts/ui-elements/examples.portlets.js') }}"></script>
+		<!-- Examples -->
+		<script src="{{ asset('octopus/assets/javascripts/ui-elements/examples.portlets.js') }}"></script>
 
-	<!-- Examples -->
-	<script src="{{ asset('octopus/assets/javascripts/tables/examples.datatables.ajax.js') }}"></script>
+		<!-- Examples -->
+		<script src="{{ asset('octopus/assets/javascripts/tables/examples.datatables.ajax.js') }}"></script>
 
-	<!-- Examples -->
-	<script src="{{ asset('octopus/assets/javascripts/ui-elements/examples.modals.js') }}"></script>
+		<!-- Examples -->
+		<script src="{{ asset('octopus/assets/javascripts/ui-elements/examples.modals.js') }}"></script>
 
-	<!-- Examples -->
-	<script src="{{ asset('octopus/assets/javascripts/tables/examples.datatables.default.js') }}"></script>
-	<script src="{{ asset('octopus/assets/javascripts/tables/examples.datatables.row.with.details.js') }}"></script>
-	<script src="{{ asset('octopus/assets/javascripts/tables/examples.datatables.tabletools.js') }}"></script>
+		<!-- Examples -->
+		{{-- <script src="{{ asset('octopus/assets/javascripts/ui-elements/examples.charts.js') }}"></script> --}}
 
-	<!-- Files Logout-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.12/sweetalert2.all.js"></script>
-	<!-- Logout -->
-	<script>
+		<!-- Examples -->
+		<script src="{{ asset('octopus/assets/javascripts/tables/examples.datatables.default.js') }}"></script>
+		<script src="{{ asset('octopus/assets/javascripts/tables/examples.datatables.row.with.details.js') }}"></script>
+		<script src="{{ asset('octopus/assets/javascripts/tables/examples.datatables.tabletools.js') }}"></script>
 
-		const logout = ()=>{
-			swal({
-				type:"info",
-				title: "Yakin mau Keluar?",
-				confirmButtonColor: '#FF0000',
-				confirmButtonText: "<i class='fa fa-thumbs-up'></i> Ya, Keluar",
-				showCancelButton:true,
-				cancelButtonColor: '#0000FF',
-				cancelButtonText: "<i class='fa fa-thumbs-down'></i> Tidak"
-			}).then(res=>{
-				if(res.value){
-					$("#logout-form").submit();
-				}
+		<!-- Files Logout-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.26.12/sweetalert2.all.js"></script>
+		<!-- Logout -->
+		<script>
+
+			const logout = ()=>{
+				swal({
+					type:"info",
+					title: "Yakin mau Keluar?",
+					confirmButtonColor: '#FF0000',
+					confirmButtonText: "<i class='fa fa-thumbs-up'></i> Ya, Keluar",
+					showCancelButton:true,
+					cancelButtonColor: '#0000FF',
+					cancelButtonText: "<i class='fa fa-thumbs-down'></i> Tidak"
+				}).then(res=>{
+					if(res.value){
+						$("#logout-form").submit();
+					}
+				});
+			}
+
+		</script>
+		{{--  --}}
+
+		{{-- menyembunyikan tampilan form versi 2--}}
+		<script type='text/javascript'>
+			$(window).load(function(){
+				$("#ktp").change(function() {
+					console.log($("#ktp option:selected").val());
+					if ($("#ktp option:selected").val() == 'Tidak Ada') {
+						$('#no_ktp').prop('hidden', 'true');
+						$('#no_ktp2').prop('hidden', 'true');
+					} else {
+						$('#no_ktp').prop('hidden', false);
+						$('#no_ktp2').prop('hidden', false);
+					}
+				});
 			});
-		}
 
-	</script>
-	{{--  --}}
-
-	{{-- menyembunyikan tampilan form versi 2--}}
-	<script type='text/javascript'>
-		$(window).load(function(){
-			$("#ktp").change(function() {
-				console.log($("#ktp option:selected").val());
-				if ($("#ktp option:selected").val() == 'Tidak Ada') {
-					$('#no_ktp').prop('hidden', 'true');
-					$('#no_ktp2').prop('hidden', 'true');
-				} else {
-					$('#no_ktp').prop('hidden', false);
-					$('#no_ktp2').prop('hidden', false);
-				}
+		</script>
+		{{-- menyembunyikan tampilan form versi 1 --}}
+		<script type='text/javascript'>
+			$(function () {
+				$("#pengguna").change(function () {
+					if ($(this).val() == "Tidak") {
+						$("#pilih").hide();
+						$("#pilih1").hide();
+						$("#pilih2").hide();
+						$("#pilih3").hide();
+					} else {
+						$("#pilih").show();
+						$("#pilih1").show();
+						$("#pilih2").show();
+						$("#pilih3").show();
+					}
+				});
 			});
-		});
+		</script>
+		{{--  membuat export--}}
+		<script type="text/javascript">
 
-	</script>
-	{{-- menyembunyikan tampilan form versi 1 --}}
-	<script type='text/javascript'>
-		$(function () {
-			$("#pengguna").change(function () {
-				if ($(this).val() == "Tidak") {
-					$("#pilih").hide();
-					$("#pilih1").hide();
-					$("#pilih2").hide();
-					$("#pilih3").hide();
-				} else {
-					$("#pilih").show();
-					$("#pilih1").show();
-					$("#pilih2").show();
-					$("#pilih3").show();
-				}
-			});
-		});
-	</script>
-	{{--  membuat export--}}
-	<script type="text/javascript">
-
-		$(document).ready(function() {
-			$('#example').DataTable( {
-				dom: 'Bfrtip',
-				buttons: [
-				'copy', 'csv', 'excel', 'pdf', 'print'
-				]
+			$(document).ready(function() {
+				$('#example').DataTable( {
+					dom: 'Bfrtip',
+					buttons: [
+					'copy', 'csv', 'excel', 'pdf', 'print'
+					]
+				} );
 			} );
-		} );
-	</script>
-	{{-- menampilkan hanya angka --}}
-	<script type="text/javascript">
-		function hanyaAngka(evt) {
-			var charCode = (evt.which) ? evt.which : event.keyCode
-			if (charCode > 31 && (charCode < 48 || charCode > 57))
+		</script>
+		{{-- menampilkan hanya angka --}}
+		<script type="text/javascript">
+			function hanyaAngka(evt) {
+				var charCode = (evt.which) ? evt.which : event.keyCode
+				if (charCode > 31 && (charCode < 48 || charCode > 57))
 
-				return false;
-			return true;
-		}
-	</script>
-	@yield('script')
-</body>
-</html>
+					return false;
+				return true;
+			}
+		</script>
+		{{--  --}}
+	{{-- <script type="text/javascript">
+
+                        var morrisBar = [{
+                            y: '2004',
+                            a: 10,
+                            b: 30
+                        }, {
+                            y: '2005',
+                            a: 100,
+                            b: 25
+                        }, {
+                            y: '2006',
+                            a: 60,
+                            b: 25
+                        }, {
+                            y: '2007',
+                            a: 75,
+                            b: 35
+                        }, {
+                            y: '2008',
+                            a: 90,
+                            b: 20
+                        }, {
+                            y: '2009',
+                            a: 75,
+                            b: 15
+                        }, {
+                            y: '2010',
+                            a: 50,
+                            b: 10
+                        }, {
+                            y: '2011',
+                            a: 75,
+                            b: 25
+                        }, {
+                            y: '2012',
+                            a: 30,
+                            b: 10
+                        }, {
+                            y: '2013',
+                            a: 75,
+                            b: 5
+                        }, {
+                            y: '2014',
+                            a: 60,
+                            b: 8
+                        }];
+                        
+                                            // See: assets/javascripts/ui-elements/examples.charts.js for more settings.
+
+                                        </script> --}}
+                                        {{--  --}}
+                                        @yield('script')
+                                    </body>
+                                    </html>

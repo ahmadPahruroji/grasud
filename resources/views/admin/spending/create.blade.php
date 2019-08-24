@@ -62,7 +62,7 @@
 					<div class="form-group">
 						<label class="col-sm-4 control-label">Tanggal</label>
 						<div class="col-sm-8">
-							<input type="date" name="date" class="form-control" placeholder="Tulis Disini" required/>
+							<input type="date" name="date" class="form-control" value="{{ $date }}" placeholder="Tulis Disini" required/>
 						</div>
 					</div>
 					<div class="form-group">

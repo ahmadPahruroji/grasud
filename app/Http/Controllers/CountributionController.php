@@ -11,6 +11,7 @@ use App\Money;
 use App\Payment;
 use App\Status;
 use App\Countribution;
+use App\Spending;
 // use App\Exports\SiswaExport;
 use App\Imports\CountributionImport;
 use Maatwebsite\Excel\Facades\Excel;
@@ -27,8 +28,9 @@ class CountributionController extends Controller
         //
         $data["countributions"] = Countribution::with('user','member')->where('status',1)->orderBy('updated_at','desc')->get();
         $data["paid"] = Countribution::with('user','member')->where('status',0)->orderBy('created_at','desc')->get();
+        $total["spendings"] = Spending::sum('total');
         $name['user'] = User::with('biodata')->find(Auth::user()->id);
-        return view('admin/countribution.index', $data, $name);
+        return view('admin/countribution.index',$total, $data, $name);
     }
 
     /**

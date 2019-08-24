@@ -80,6 +80,20 @@
                                 </tbody>
                             </table>
                         </div>
+                        @php
+                        function format_uang($angka){
+                            $hasil = "Rp. " . number_format($angka,2,',','.');
+                            return $hasil;
+                        }
+                        function pengurangan($a, $b){
+                            $kurang= $a-$b;
+                            return $kurang;
+                        }
+                        @endphp
+                        <center>
+                            <h3> <b>Sisa Saldo Saat Ini</b></h3>
+                            <h1>{{ format_uang(pengurangan($countributions->sum('money'),$spendings)) }}</h1>
+                        </center>
                     </div>
                     {{--  --}}
                     <!-- Import Excel -->

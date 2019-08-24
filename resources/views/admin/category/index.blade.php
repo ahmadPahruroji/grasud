@@ -68,12 +68,19 @@
                             </thead>
                             <tbody>
                                 @foreach ($spendings as $s => $spending)
+                                @php
+                                    setlocale (LC_TIME, 'ID');
+                                    $date = strftime( "%d %B %Y", strtotime($spending->date));
+
+                                    // Rupiah //
+                                    $rupiah = "Rp " . number_format($spending->total,2,',','.');
+                                    @endphp
                                 <tr>
                                     <td>{{ $s+1 }}</td>
                                     <td>{{ $spending->category->name }}</td>
                                     <td>{{ $spending->qty }}</td>
-                                    <td>{{ $spending->total }}</td>
-                                    <td>{{ $spending->date }}</td>
+                                    <td>{{ $rupiah }}</td>
+                                    <td>{{ $date }}</td>
                                     <td>{{ $spending->description }}</td>
                                     <td>
                                      <center>

@@ -26,6 +26,8 @@ class ReportController extends Controller
         $name['user'] = User::with('biodata')->find(Auth::user()->id);
         return view('admin/report.index', $data, $name);
     }
+    ////
+
 
     /**
      * Show the form for creating a new resource.
@@ -77,6 +79,16 @@ class ReportController extends Controller
         return view('admin/report.show',$data,$total,$name);
     }
 
+    public function bulanan(Request $request)
+    {
+        $bulan = $request['bulan'];
+        $tahun = $request['tahun'];
+        $data["users"] = User::where('role_id',2)->get();
+        $data["countributions"] = Countribution::with('user','member')->where('month',[$bulan])->where('year', [$tahun])->where('status',1)->get();
+        $user["users"] = User::with('biodata')->find(Auth::user()->id);
+        return view('admin/report.bulanan',$data,$user);
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -119,5 +131,13 @@ class ReportController extends Controller
          $total["countributions"] = Countribution::sum('money');
          $data["countributions"] = Countribution::get();
         return view('admin/report.export',$total,$data);   
+    }
+    // 
+    public function iuran()
+    {
+        $data["countributions"] = Countribution::with('user','member')->where('status',1)->orderBy('created_at','desc')->get();
+        // $data["users"] = User::where('role_id',2)->get();
+        // $name['user'] = User::with('biodata')->find(Auth::user()->id);
+        return view('admin/report.iuran', $data);   
     }
 }

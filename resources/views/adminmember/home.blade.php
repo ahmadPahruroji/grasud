@@ -12,7 +12,7 @@ ini_set( 'display_errors', 1 );
     error_reporting( E_ALL );
     $to   = $users->email;
     $judul  = "Waktu Pembayaran Iuran";
-    $dari = "From: db_ahmad@gmail.com \n";
+    $dari = "From: db.ahmad44@gmail.com \n";
     //pass @Grasud12
     $dari .= "Content-type: text/html \r\n";
                                                     

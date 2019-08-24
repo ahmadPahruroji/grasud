@@ -76,8 +76,10 @@ Route::group(['middleware'=>'auth'],function(){
 			'reports'=>'ReportController',
 		]);
 		Route::get('/export', 'ReportController@export');
+		Route::get('/iuran', 'ReportController@iuran');
 		Route::post('/export/show', 'ReportController@show')->name('/export.show');
 		Route::post('/export/tampil', 'ReportController@tampil')->name('/export.tampil');
+		Route::post('/iuran/bulanan', 'ReportController@bulanan')->name('/iuran.bulanan');
 		// Route::post('/homeuser/show','User\HomeUserController@show')->name('/homeuser.show');
 		Route::post('events/publish/{id}', 'EventController@publish')->name('events.publish');
 		Route::post('complaints/status/{id}', 'ComplaintController@status')->name('complaints.status');

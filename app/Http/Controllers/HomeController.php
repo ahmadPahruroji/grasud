@@ -28,12 +28,22 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $data["login"] = request()->login ?? "false";
-        $total["countributions"] = Countribution::where('status',1)->sum('money');
-        $data["members"] = Member::get();
-        $data["officers"] = Officer::get();
-        $data["users"] = User::get();
-        $name['user'] = User::with('biodata')->find(Auth::user()->id);
-        return view('home', $total, $data, $name);
+        $login = request()->login ?? "false";
+        $total = Countribution::where('status',1)->sum('money');
+        $countribution = Countribution::all();
+        $member = Member::get();
+        $officer = Officer::get();
+        $users = User::get();
+        $user = User::with('biodata')->find(Auth::user()->id);
+        // 
+        $bulan = [];
+        $iuran = [];
+        foreach ($countribution as $cont) {
+            # code...
+            $bulan[] = $cont->year;
+            $iuran[] = $cont->money;
+        }
+        // dd($bulan);
+        return view('home',['login' => $login,'total' => $total,'countribution' => $countribution,'member' => $member,'officer' => $officer,'users' => $users,'user' => $user,'bulan' => $bulan,'iuran' => $iuran]);
     }
 }
