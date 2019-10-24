@@ -58,11 +58,11 @@ class ReportController extends Controller
      */
     public function tampil(Request $request)
     {
-        $from = $request['tgl_dari'];
-        $until = $request['tgl_sampai'];
+        $bulan = $request['bulan'];
+        // $until = $request['tgl_sampai'];
         $nama = $request['nama'];
         $data["users"] = User::where('role_id',2)->get();
-        $data["countributions"] = Countribution::with('user','member')->whereBetween('date',[$from,$until])->where('user_id', [$nama])->get();
+        $data["countributions"] = Countribution::with('user','member')->where('month',$bulan)->where('user_id', [$nama])->get();
         $use["users"] = User::with('biodata')->find(Auth::user()->id);
         return view('admin/report.tampil',$data,$use);
     }

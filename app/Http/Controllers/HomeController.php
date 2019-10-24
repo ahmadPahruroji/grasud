@@ -8,6 +8,7 @@ use App\User;
 use App\Countribution;
 use App\Member;
 use App\Officer;
+use App\Spending;
 
 class HomeController extends Controller
 {
@@ -30,6 +31,7 @@ class HomeController extends Controller
     {
         $login = request()->login ?? "false";
         $total = Countribution::where('status',1)->sum('money');
+        $luaran = Spending::sum('total');
         $countribution = Countribution::all();
         $member = Member::get();
         $officer = Officer::get();
@@ -40,10 +42,10 @@ class HomeController extends Controller
         $iuran = [];
         foreach ($countribution as $cont) {
             # code...
-            $bulan[] = $cont->year;
+            $bulan[] = $cont->month;
             $iuran[] = $cont->money;
         }
         // dd($bulan);
-        return view('home',['login' => $login,'total' => $total,'countribution' => $countribution,'member' => $member,'officer' => $officer,'users' => $users,'user' => $user,'bulan' => $bulan,'iuran' => $iuran]);
+        return view('home',['login' => $login,'total' => $total,'luaran' => $luaran,'countribution' => $countribution,'member' => $member,'officer' => $officer,'users' => $users,'user' => $user,'bulan' => $bulan,'iuran' => $iuran]);
     }
 }

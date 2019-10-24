@@ -36,11 +36,11 @@
                                 <table class="table table-bordered table-striped" id="datatable-ajax">
                                     <thead>
                                         <tr>
-                                            <th width="5%">No</th>
-                                            <th width="20%">Nama</th>
+                                            <th width="15%">No</th>
+                                            <th width="10%">Nama</th>
                                             <th width="20%">Foto</th>
                                             <th width="15%">Tanggal</th>
-                                            <th width="20%">Keterangan</th>
+                                            <th width="30%">Keterangan</th>
                                             <th width="25%">Aksi</th>
                                         </tr>
                                     </thead>

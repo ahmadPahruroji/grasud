@@ -27,13 +27,14 @@
 				</header>
 				<div class="panel-body">
 					<div class="form-group">
-						<label class="col-sm-4 control-label">Pengguna</label>
+						{{-- <label class="col-sm-4 control-label">Pengguna</label> --}}
 						<div class="col-sm-8">
-							<select class="form-control" name="user_id">
+							<input type="hidden" name="user_id" class="form-control" value="1" placeholder="Tulis Disini" hidden="hidden" required/>
+							{{-- <select class="form-control" name="user_id">
 								@foreach ($users as $u => $user)
 								<option value="{{ $user->id }}">{{ $user->name }}</option>
 								@endforeach
-							</select>
+							</select> --}}
 						</div>
 					</div>
 					<div class="form-group">

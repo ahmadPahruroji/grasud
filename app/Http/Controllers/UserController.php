@@ -73,9 +73,10 @@ class UserController extends Controller
         // {
         //     return response()->json(['errors'=>$validator->errors()->all()]);
         // }
-
+// $user->fill($request->bcrypt('password'));
         $user = new User();
         $user->fill($request->all());
+        // $user->password = $month;
         if ($request->hasFile('image')) {
             $path = $request->file('image')->store('user');
             $user->image = $path;    

@@ -22,15 +22,15 @@
         <div class="panel-body">
             <div class="col col-md-12">
               <div class="row form-group">
-               <div class="col col-md-2"><label for="text-input" class="form-control-label">Tanggal Dari</label></div>
+               <div class="col col-md-2"><label for="text-input" class="form-control-label">Bulan</label></div>
                <div class="col-12 col-md-10">
-                <input type="date" id="tgl_dari" name="tgl_dari" class="form-control" required="required">
+                <input type="text" id="bulan" name="bulan" class="form-control" required="required">
             </div>
         </div>
-        <div class="row form-group">
+        {{-- <div class="row form-group">
             <div class="col col-md-2"><label for="text-input" class="form-control-label">Sampai Tanggal</label></div>
             <div class="col-12 col-md-10"><input type="date" id="tgl_sampai" name="tgl_sampai" class="form-control" required="required"></div>
-        </div>
+        </div> --}}
         <div class="row form-group">
             <div class="col col-md-2"><label for="text-input" class="form-control-label">Nama</label></div>
             <div class="col-12 col-md-10">

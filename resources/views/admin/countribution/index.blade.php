@@ -133,14 +133,14 @@
                             <table class="table table-bordered table-striped mb-none" id="datatable-default">
                                 <thead>
                                     <tr>
-                                        <th>No</th>
-                                        <th>Nama</th>
-                                        <th>Jumlah Iuran</th>
-                                        <th>Tanggal</th>
-                                        <th>Bulan</th>
-                                        <th>Tahun</th>
-                                        <th>Status</th>
-                                        <th>Aksi</th>
+                                        <th width="5%">No</th>
+                                        <th width="5%">Nama</th>
+                                        <th width="5%">Jumlah Iuran</th>
+                                        <th width="5%">Tanggal</th>
+                                        <th width="5%">Bulan</th>
+                                        <th width="5%">Tahun</th>
+                                        <th width="5%">Status</th>
+                                        <th width="5%">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>

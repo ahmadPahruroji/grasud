@@ -22,59 +22,59 @@
         <div class="panel-body">
             <div class="col col-md-12">
               <div class="row form-group">
-               <div class="col col-md-2"><label for="text-input" class="form-control-label">Bulan</label></div>
-               <div class="col-12 col-md-10">
-                <input type="text" id="bulan" name="bulan" class="form-control" required="required">
+                 <div class="col col-md-2"><label for="text-input" class="form-control-label">Bulan</label></div>
+                 <div class="col-12 col-md-10">
+                    <input type="text" id="bulan" name="bulan" class="form-control" required="required">
+                </div>
             </div>
+            <div class="row form-group">
+                <div class="col col-md-2"><label for="text-input" class="form-control-label">Tahun</label></div>
+                <div class="col-12 col-md-10"><input type="text" id="tahun" name="tahun" class="form-control" required="required"></div>
+            </div>
+            
+            <br>
+            <button type="submit" class="btn btn-info center-block btn-block"><i class="fa fa-zoom"></i> Cari</button> 
         </div>
-        <div class="row form-group">
-            <div class="col col-md-2"><label for="text-input" class="form-control-label">Tahun</label></div>
-            <div class="col-12 col-md-10"><input type="text" id="tahun" name="tahun" class="form-control" required="required"></div>
-        </div>
-        
-        <br>
-        <button type="submit" class="btn btn-info center-block btn-block"><i class="fa fa-zoom"></i> Cari</button> 
     </div>
-</div>
 </form>
 <div class="panel-body">
-   <table class="table table-bordered table-striped mb-none" id="datatable-default">
-      <thead>
-         <tr>
-            <th width="5%">No</th>
-            <th width="20%">Nama</th>
-            <th width="15%">Jumlah Iuran</th>
-            <th width="15%">Tanggal</th>
-            <th width="15%">Bulan</th>
-            <th width="15%">Tahun</th>
-            <th width="15%">Status</th>
-            {{-- <th width="25%">Aksi</th> --}}
-        </tr>
-    </thead>
-    <tbody>
-     @foreach ($countributions as $m => $countribution)
-     @php
-     setlocale (LC_TIME, 'ID');
-     $date = strftime( "%d %B %Y", strtotime($countribution->date));
+ <table class="table table-bordered table-striped mb-none" id="datatable-default">
+  <thead>
+   <tr>
+    <th width="5%">No</th>
+    <th width="20%">Nama</th>
+    <th width="15%">Jumlah Iuran</th>
+    <th width="15%">Tanggal</th>
+    <th width="15%">Bulan</th>
+    <th width="15%">Tahun</th>
+    <th width="15%">Status</th>
+    {{-- <th width="25%">Aksi</th> --}}
+</tr>
+</thead>
+<tbody>
+   @foreach ($countributions as $m => $countribution)
+   @php
+   setlocale (LC_TIME, 'ID');
+   $date = strftime( "%d %B %Y", strtotime($countribution->date));
 
                // Rupiah //
-     $rupiah = "Rp " . number_format($countribution->money,2,',','.');
-     @endphp
-     <tr>
-        <td>{{ $m+1 }}</td>
-        <td>{{ $countribution->user->name }}</td>
-        <td style="text-align: right;">{{ $rupiah }}</td>
-        <td>{{ $date }}</td>
-        <td>{{ $countribution->month }}</td>
-        <td>{{ $countribution->year }}</td>
-        <td>
-           <span class="label radius-circle float-left">
-            @if ($countribution->status == 0)
-            <button type="link" value="0" class="btn btn-danger btn-sm">belum lunas</button>
-            @else
-            <button onclick="return confirm('apakah belum lunas?');" value="1" class="btn btn-success btn-sm">Lunas</button>
-        @endif</span>
-    </td>
+   $rupiah = "Rp " . number_format($countribution->money,2,',','.');
+   @endphp
+   <tr>
+    <td>{{ $m+1 }}</td>
+    <td>{{ $countribution->user->name }}</td>
+    <td style="text-align: right;">{{ $rupiah }}</td>
+    <td>{{ $date }}</td>
+    <td>{{ $countribution->month }}</td>
+    <td>{{ $countribution->year }}</td>
+    <td>
+     <span class="label radius-circle float-left">
+        @if ($countribution->status == 0)
+        <button type="link" value="0" class="btn btn-danger btn-sm">belum lunas</button>
+        @else
+        <button onclick="return confirm('apakah belum lunas?');" value="1" class="btn btn-success btn-sm">Lunas</button>
+    @endif</span>
+</td>
     				{{-- <td>
     					<center>
     						<div class="btn-group">
