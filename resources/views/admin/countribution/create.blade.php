@@ -27,7 +27,7 @@
 						<a href="#" class="fa fa-times"></a> --}}
 					</div>
 					<a class="mb-xs mt-xs mr-xs btn btn-default pull-right" href="{{ url('countributions') }}"><i class="fa fa-arrow-left"> </i> Kembali</a>
-					<h2 class="panel-title">Form Iuran Warga</h2>
+					<h3 class="panel-title">Form Iuran Warga</h3>
 					{{--  --}}
 				</header>
 				<div class="panel-body">
@@ -154,7 +154,7 @@
 					</div>
 				</div>
 				<footer class="panel-footer">
-					<button type="submit" class="btn btn-success pull-right">Simpan</button>
+					<button type="submit" class="btn btn-success pull-right">Bayar</button>
 					<button type="reset" class="btn btn-default">Ulang</button>
 				</footer>
 			</section>

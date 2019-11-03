@@ -22,7 +22,7 @@
                             </div>
                             <div class="widget-summary-col">
                                 <div class="summary">
-                                    <h4 class="title">Total Iuran</h4>
+                                    <h4 class="title">Total Pemasukan</h4>
                                     <div class="info">
                                         <strong class="amount">
                                             <?php
@@ -114,7 +114,7 @@
                     </div>
                 </section>
             </div>
-            <div class="col-md-6 col-xl-12">
+            {{-- <div class="col-md-6 col-xl-12">
                 <section class="panel">
                     <div class="panel-body bg-secondary">
                         <div class="widget-summary">
@@ -139,7 +139,7 @@
                         </div>
                     </div>
                 </section>
-            </div>
+            </div> --}}
             <div class="col-md-6 col-xl-12">
                 <section class="panel">
                     <div class="panel-body bg-tertiary">
@@ -159,14 +159,14 @@
                                     </div>
                                 </div>
                                 <div class="summary-footer">
-                                    <a href="{{ url ('member') }}" class="text-uppercase">(Lihat Data)</a>
+                                    <a href="{{ url ('members') }}" class="text-uppercase">(Lihat Data)</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
-            <div class="col-md-6 col-xl-12">
+            {{-- <div class="col-md-6 col-xl-12">
                 <section class="panel">
                     <div class="panel-body bg-quartenary">
                         <div class="widget-summary">
@@ -191,7 +191,7 @@
                         </div>
                     </div>
                 </section>
-            </div>
+            </div> --}}
         </div>
         <div id="chartiuran"></div>
     </div>

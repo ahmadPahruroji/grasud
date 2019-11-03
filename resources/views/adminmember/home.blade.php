@@ -39,7 +39,7 @@ ini_set( 'display_errors', 1 );
                             </div>
                             <div class="widget-summary-col">
                                 <div class="summary">
-                                    <h4 class="title">Total Iuran</h4>
+                                    <h4 class="title">Total Iuran Seluruh Warga</h4>
                                     <div class="info">
                                         <strong class="amount">
                                             <?php

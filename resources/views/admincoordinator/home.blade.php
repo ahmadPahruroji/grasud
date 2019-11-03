@@ -22,7 +22,7 @@
                             </div>
                             <div class="widget-summary-col">
                                 <div class="summary">
-                                    <h4 class="title">Total Iuran</h4>
+                                    <h4 class="title">Total Iuran Seluruh Warga</h4>
                                     <div class="info">
                                         <strong class="amount">
                                          <?php
@@ -55,7 +55,7 @@
                             </div>
                             <div class="widget-summary-col">
                                 <div class="summary">
-                                    <h4 class="title">Data Keluhan</h4>
+                                    <h4 class="title">Data Keluhan Warga</h4>
                                     <div class="info">
                                         <strong class="amount">
                                             {{$complaints->count()}}

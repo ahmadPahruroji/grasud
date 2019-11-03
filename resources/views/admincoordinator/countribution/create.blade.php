@@ -146,8 +146,8 @@
 					</div>
 				</div>
 				<footer class="panel-footer">
-					<button type="submit" class="btn btn-success pull-right">Submit</button>
-					<button type="reset" class="btn btn-default">Reset</button>
+					<button type="submit" class="btn btn-success pull-right">Bayar</button>
+					<button type="reset" class="btn btn-default">Ulang</button>
 				</footer>
 			</section>
 		</form>

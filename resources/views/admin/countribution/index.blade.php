@@ -27,10 +27,10 @@
             <div class="tabs tabs-primary">
                 <ul class="nav nav-tabs">
                     <li class="active">
-                        <a href="#popular" data-toggle="tab" style="color: green"><i class="fa fa-money"></i> Data Iuran Warga</a>
+                        <a href="#popular" data-toggle="tab" style="color: green"><i class="fa fa-money"></i> Laporan Iuran Warga</a>
                     </li>
                     <li>
-                        <a href="#recent" data-toggle="tab" style="color: red"><i class="fa fa-money"></i> Data Iuran Warga</a>
+                        <a href="#recent" data-toggle="tab" style="color: red"><i class="fa fa-money"></i>  Iuran Warga Belum Lunas</a>
                     </li>
                 </ul>
                 <div class="tab-content">

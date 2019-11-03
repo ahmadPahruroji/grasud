@@ -301,17 +301,24 @@
 										<span>Mailbox</span>
 									</a>
 								</li> --}}
+								<li>
+									<a href="{{ url('countributionuser') }}" style="color: white">
+										{{-- <span class="pull-right label label-primary">182</span> --}}
+										<i class="fa fa-list-alt" aria-hidden="true"></i>
+										<span>Iuran Warga</span>
+									</a>
+								</li>
 								<li  class="nav-parent">
-									<a style="color: white">
+									{{-- <a style="color: white">
 										<i class="fa fa-list-alt" aria-hidden="true"></i>
 										<span>Data Iuran</span>
-									</a>
+									</a> --}}
 									<ul class="nav nav-children">
-										<li>
+										{{-- <li>
 											<a href="{{ url('countributionuser') }}" style="color: white">
 												Iuran Warga
 											</a>
-										</li>
+										</li> --}}
 										{{-- <li>
 											<a href="{{ url('proofusers') }}" style="color: white">
 												Bukti Pembayaran
@@ -892,10 +899,11 @@
 			swal({
 				type:"info",
 				title: "Yakin mau Keluar?",
-				confirmButtonText: "<i class='fa fa-thumbs-up'></i> Ya, Keluar",
-				showCancelButton:true,
-				cancelButtonColor: '#d33',
-				cancelButtonText: "<i class='fa fa-close'></i> Tidak"
+					confirmButtonColor: '#FF0000',
+					confirmButtonText: " Ya, Keluar",
+					showCancelButton:true,
+					cancelButtonColor: '#0000FF',
+					cancelButtonText: " Tidak"
 			}).then(res=>{
 				if(res.value){
 					$("#logout-form").submit();

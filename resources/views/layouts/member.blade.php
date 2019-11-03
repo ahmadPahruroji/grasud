@@ -819,10 +819,11 @@
 			swal({
 				type:"info",
 				title: "Yakin mau Keluar?",
-				confirmButtonText: "<i class='fa fa-thumbs-up'></i> Ya, Keluar",
-				showCancelButton:true,
-				cancelButtonColor: '#d33',
-				cancelButtonText: "<i class='fa fa-close'></i> Tidak"
+					confirmButtonColor: '#FF0000',
+					confirmButtonText: " Ya, Keluar",
+					showCancelButton:true,
+					cancelButtonColor: '#0000FF',
+					cancelButtonText: " Tidak"
 			}).then(res=>{
 				if(res.value){
 					$("#logout-form").submit();

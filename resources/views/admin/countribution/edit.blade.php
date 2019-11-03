@@ -28,7 +28,7 @@
 				</header>
 				<div class="panel-body">
 					<div class="form-group">
-						<label class="col-sm-4 control-label">Pengguna</label>
+						<label class="col-sm-4 control-label">Warga</label>
 						<div class="col-sm-8">
 							<select class="form-control" name="user_id">
 								@foreach ($users as $u => $user)
@@ -126,8 +126,8 @@
 							<input type="hidden" class="form-control" name="status" value="1" placeholder="type something" required>
 				</div>
 				<footer class="panel-footer">
-					<button type="submit" class="btn btn-success pull-right">Submit</button>
-					<button type="reset" class="btn btn-default">Reset</button>
+					<button type="submit" class="btn btn-success pull-right">Simpan</button>
+					<button type="reset" class="btn btn-default">Ulang</button>
 				</footer>
 			</section>
 		</form>
